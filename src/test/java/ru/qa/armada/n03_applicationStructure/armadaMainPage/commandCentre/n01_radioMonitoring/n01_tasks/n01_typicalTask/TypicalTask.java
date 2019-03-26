@@ -1,6 +1,5 @@
 package ru.qa.armada.n03_applicationStructure.armadaMainPage.commandCentre.n01_radioMonitoring.n01_tasks.n01_typicalTask;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ru.qa.armada.n01_workWithWebElement.elementDecorator.CustomFieldDecorator;
