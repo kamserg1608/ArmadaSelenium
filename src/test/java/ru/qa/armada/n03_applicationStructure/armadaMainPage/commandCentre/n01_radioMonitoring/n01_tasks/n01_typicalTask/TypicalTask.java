@@ -52,4 +52,10 @@ public class TypicalTask {
     }
     applyTypicalTaskSelection.click();
   }
+  public void chooseTypicalTask1(){
+    String taskName = "AZAZ";
+    taskNameField.setText(taskName);
+    openSampleTasks.click();
+
+  }
 }

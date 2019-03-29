@@ -4,6 +4,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ru.qa.armada.n01_workWithWebElement.elementDecorator.CustomFieldDecorator;
 import ru.qa.armada.n01_workWithWebElement.webPageElements.Button;
+import ru.qa.armada.n01_workWithWebElement.webPageElements.ListWebElements;
 import ru.qa.armada.n01_workWithWebElement.webPageElements.TabElement;
 import ru.qa.armada.n02_appManagerForTest.SingletonWaitingItem;
 import ru.qa.armada.n02_appManagerForTest.SingletonWebDriver;
@@ -17,6 +18,8 @@ public class Equipment{
   private TabElement tabEquipment;
   @FindBy(xpath = "//span[text()='Заводской номер']/ancestor::tbody//td[1]/div")
   private Button nameOfEquipment;
+  @FindBy(xpath = "")
+  private ListWebElements oneRange;
 
   public Equipment() {
     PageFactory.initElements(new CustomFieldDecorator(SingletonWebDriver.driver),this);
@@ -35,6 +38,7 @@ public class Equipment{
     activateTabEquipment();
     SingletonWaitingItem.sleep(2000);
     selectEquipment();
+
     SingletonWaitingItem.sleep(2000);
     rangeParameters.addComplexRange();
   }
